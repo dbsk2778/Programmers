@@ -1,4 +1,4 @@
-import DP.Fibonacci;
+import dp.Fibonacci;
 import java.util.Scanner;
 
 public class Main
