@@ -1,4 +1,4 @@
-package STR_ALGORITHM;
+package str_algorithm;
 
 import java.util.ArrayList;
 import java.util.Arrays;
