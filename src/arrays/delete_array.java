@@ -16,6 +16,7 @@ public class delete_array
         
         System.out.println(Arrays.toString(solution(arr, delete_list)));
         System.out.println(Arrays.toString(solution2(arr, delete_list)));
+        System.out.println(Arrays.toString(solution3(arr, delete_list)));
     }
     
     public static int[] solution(int[] arr, int[] delete_list) {
@@ -67,6 +68,22 @@ public class delete_array
             answer[i] = list.get(i);
         }
         
+        return answer;
+    }
+    
+    public static int[] solution3 (int[] arr, int[] delete_list) {
+        List<Integer> list = new ArrayList<>();
+        for(int n : arr) {
+            list.add(n);
+        }
+        for(int n: delete_list) {
+            list.remove((Integer) n); // Integer을 붙이지 않으면 인덱스 삭제가 됨, Integer을 붙이면 값 삭제가 됨
+        }
+        int[] answer = new int[list.size()];
+        
+        for(int i=0; i<list.size(); i++){
+            answer[i] = list.get(i);
+        }
         return answer;
     }
 }
