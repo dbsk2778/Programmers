@@ -13,14 +13,11 @@ public class select_array
     }
     
     
-    public static int[] solution (
-        int l,
-        int r
-    ) {
+    public static int[] solution (int l, int r) {
         
-        ArrayList<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         
-        for (int i = 1; i < 64; i++ )
+        for ( int i = 1; i < 64; i++ )
             {
                 int num = Integer.parseInt(Integer.toBinaryString(i)) * 5;
                 if ( l <= num && num <= r )
@@ -36,38 +33,60 @@ public class select_array
     }
     
     public static int[] solution2 (int l, int r) {
-        List<Integer> list = new ArrayList<>();
-        for (
-            int i = l;
-            i <= r;
-            i++
-        )
-            {
-                String str = String.valueOf(i);
-                boolean flag = false;
-                for (int j = 0;j < str.length();j++)
-                    {
-                        char c = str.charAt(j);
-                        if ( c != '0' && c != '5' )
-                            {
-                                flag = true;
-                                break;
-                            }
-                    }
-                if ( !flag ) list.add(i);
+        ArrayList<Integer> resultList = new ArrayList<>();
+        
+        for (int i = l; i <= r; i++) {
+            if (isZeroFiveNumber(i)) {
+                resultList.add(i);
             }
-        if ( list.size() == 0 )
-            {
-                int[] answer = new int[1];
-                answer[0] = -1;
-                return answer;
+        }
+        
+        if (resultList.isEmpty()) {
+            return new int[]{-1};
+        } else {
+            return resultList.stream().mapToInt(Integer::intValue).toArray();
+        }
+    }
+    
+    private static boolean isZeroFiveNumber(int num) {
+        String strNum = Integer.toString(num);
+        for (char c : strNum.toCharArray()) {
+            if (c != '0' && c != '5') {
+                return false;
             }
+        }
+        return true;
+    }
+    
+    public int[] solution3 (int[] arr, int[][] intervals) {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int[] interval : intervals) {
+            for (int i = interval[0];i <= interval[1];i++)
+                arrayList.add(arr[i]);
+        }
+        
+        int idx = 0;
+        int[] answer = new int[arrayList.size()];
+        for (int data : arrayList)
+            answer[idx++] = data;
+        return answer;
+    }
+    
+    public int[] solution4 (int[] arr, int[][] intervals) {
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < intervals.length; i++) {
+            for (int j = intervals[i][0]; j <= intervals[i][1]; j++) {
+                list.add(arr[j]);
+            }
+        }
+        
         int[] answer = new int[list.size()];
         
-        for (int i = 0; i < list.size(); i++ )
-            {
-                answer[i] = list.get(i);
-            }
+        for (int i = 0; i < list.size(); i++) {
+            answer[i] = list.get(i);
+        }
+        
         return answer;
     }
 }
