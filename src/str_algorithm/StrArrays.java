@@ -16,8 +16,9 @@ public class StrArrays
         String myString = "cvsgiorszzzmrpaqpe";
         int[] indexList = {16, 6, 5, 3, 12, 14, 11, 11, 17, 12, 7};
         
-        System.out.println(charListTest(myString, indexList));
-        System.out.println(charListTest2(myString, indexList));
+        System.out.println(charTest(myString, indexList));
+        System.out.println(charTest2(myString, indexList));
+        System.out.println(charTest3(myString, indexList));
     }
     
     public static void strArray1 (String str) {
@@ -44,7 +45,7 @@ public class StrArrays
     }
     
     // my_string의 index_list의 원소들에 해당하는 인덱스의 글자들을 순서대로 이어 붙인 문자열을 return 하는 solution 함수를 작성해 주세요.
-    public static String charListTest (String myString, int[] indexList) {
+    public static String charTest (String myString, int[] indexList) {
         String answer = "";
         char[] charList = myString.toCharArray();
     
@@ -54,15 +55,24 @@ public class StrArrays
         return answer;
     }
     
-    public static String charListTest2 (String myString, int[] indexList) {
-        StringBuilder answer = new StringBuilder();
+    public static String charTest2 (String myString, int[] indexList) {
+        StringBuilder sb = new StringBuilder();
         char[] charList = myString.toCharArray();
     
         for ( int i : indexList )
             {
-                answer.append(charList[i]);
+                sb.append(charList[i]);
             }
-        return answer.toString();
+        return sb.toString();
+    }
+    
+    public static String charTest3 (String myString, int[] indexList) {
+        StringBuilder sb = new StringBuilder();
+        for ( int i : indexList )
+            {
+                sb.append(myString.charAt(i));
+            }
+        return sb.toString();
     }
     
     
