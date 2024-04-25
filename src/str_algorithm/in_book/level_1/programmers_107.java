@@ -1,4 +1,4 @@
-package str_algorithm.in_book;
+package str_algorithm.in_book.level_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,8 +7,6 @@ import java.util.Arrays;
 
 public class programmers_107 {
 
-  public programmers_107() {
-  }
 
   /*
      p. 107 / programmers_12932
