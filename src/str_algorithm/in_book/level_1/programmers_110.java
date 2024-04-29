@@ -38,6 +38,6 @@ public class programmers_110 {
     position =
         (position + n) % ('Z' - 'A' + 1);  // n만큼 민 위치를 구함 ('Z' - 'A' + 1 값이 26이므로 26으로 대체 가능)
 
-    return (char) (position + offset);  // 민 문자를 반환
+    return (char) (position + offset);  // 민 문자를 반환 (char 형으로 형변환)
   }
 }
