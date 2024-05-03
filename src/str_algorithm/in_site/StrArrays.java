@@ -1,4 +1,4 @@
-package str_algorithm;
+package str_algorithm.in_site;
 
 import java.util.ArrayList;
 import java.util.Arrays;
