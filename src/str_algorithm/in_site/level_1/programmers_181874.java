@@ -12,7 +12,7 @@ public class programmers_181874 {
   public static String solution(String s) {
     StringBuilder sb = new StringBuilder();
     for (char c : s.toCharArray()) {
-      if (c == 'A') {
+      if (c == 'a') {
         sb.append('A');
       } else {
         sb.append(Character.toLowerCase(c));
