@@ -1,4 +1,4 @@
-package str_algorithm.in_site.level_1;
+package str_algorithm.in_site.day_1;
 
 public class programmers_181874 {
 
