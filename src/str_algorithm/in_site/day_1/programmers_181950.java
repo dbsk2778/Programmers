@@ -9,6 +9,7 @@ public class programmers_181950 {
   }
 
   public static void solution(String s, int n) {
+    // Math.max 함수는 사용하지 않아도 됨 (n이 0 이상이기 때문에)
     System.out.println(s.repeat(Math.max(0, n)));
   }
 
