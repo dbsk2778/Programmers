@@ -1,4 +1,4 @@
-package str_algorithm.in_site;
+package str_algorithm;
 
 public class Palindrome
 {
