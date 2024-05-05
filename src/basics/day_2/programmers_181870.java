@@ -1,4 +1,4 @@
-package str_algorithm.in_site.day_2;
+package basics.day_2;
 
 import java.util.Arrays;
 
