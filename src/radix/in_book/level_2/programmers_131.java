@@ -22,6 +22,7 @@ public class programmers_131 {
       int length = s.length();
       s = s.replaceAll("0", "");
       removed += length - s.length();
+      // s = Integer.toString(s.length(), 2); 와 동일한 코드
       s = Integer.toBinaryString(s.length());
     }
     return new int[]{loop, removed};
