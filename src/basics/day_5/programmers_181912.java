@@ -1,4 +1,4 @@
-package arrays.basic;
+package basics.day_5;
 
 import java.util.ArrayList;
 import java.util.List;
