@@ -18,7 +18,7 @@ public class programmers_181866 {
     String myString2 = "axbxcxdxex";
     System.out.println(Arrays.toString(solution2(myString2)));
     myString2 = "dxccxbbbxaaaa";
-    System.out.println(Arrays.toString(solution(myString)));
+    System.out.println(Arrays.toString(solution(myString2)));
   }
 
   public static String[] solution(String myString) {
@@ -26,11 +26,13 @@ public class programmers_181866 {
     ArrayList<String> resultList = new ArrayList<>();
 
     for (String str : splitArr) {
+      // !str.equals("") or str.length() != 0
       if (!str.isEmpty()) {
         resultList.add(str);
       }
     }
-
+    // new String[0]는 l.toArray 메서드에서 배열을 반환할 때 사용할 배열의 타입과 크기를 지정하는 역할을 합니다
+    // new String[0]은 메서드에 전달되는 배열의 타입과 초기 크기를 나타냅니다. 여기서 크기가 0인 배열을 전달하지만, 실제로 반환되는 배열의 크기는 리스트 l의 크기에 맞춰서 동적으로 할당됩니다.
     String[] resultArr = resultList.toArray(new String[0]);
     Arrays.sort(resultArr);
 
