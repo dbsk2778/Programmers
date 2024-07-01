@@ -1,7 +1,6 @@
 package str_algorithm;
 
-public class Palindrome
-{
+public class Palindrome {
 
-    
+
 }
