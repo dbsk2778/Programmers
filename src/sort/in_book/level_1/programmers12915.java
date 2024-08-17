@@ -1,6 +1,7 @@
 package sort.in_book.level_1;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class programmers12915 {
     public static void main(String[] args) {
@@ -29,7 +30,9 @@ public class programmers12915 {
     public static void example(String[] strings, int n) {
         // 단순한 n번째 글자로 정렬
         // 아래의 코드는 String을 int로 나타내서 비교함, 이와 같이 String을 int로 나타내서 정렬해야 하는 경우가 많은데,
-
         Arrays.sort(strings, (s1, s2) -> s1.charAt(n) - s2.charAt(n));
+        // 위 코드처럼 직접 비교해도 되지만, Comparator의 static 메서드인 comparingInt()를 사용하면 더 간편하게 비교 가능
+        Arrays.sort(strings, Comparator.comparingInt(s -> s.charAt(n)));
+
     }
 }
